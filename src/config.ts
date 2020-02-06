@@ -37,6 +37,7 @@ export const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecode
 export const MINER = string_to_permission(process.env.MINER);
 export const CPU_PAYER = string_to_permission(process.env.CPU_PAYER);
 export const QUANTITY = process.env.QUANTITY;
+export const PROFIT = process.env.PROFIT;
 export const AUTHORIZATION = [
     CPU_PAYER,
     MINER
@@ -54,4 +55,5 @@ console.log("NODEOS_ENDPOINT:", endpoint);
 console.log("MINER:", MINER);
 console.log("CPU_PAYER:", CPU_PAYER);
 console.log("QUANTITY:", QUANTITY);
+console.log("PROFIT:", PROFIT);
 console.log("==============")

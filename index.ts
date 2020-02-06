@@ -1,5 +1,5 @@
 import { InboundMessageType, InboundMessage, ActionTraceData } from "@dfuse/client";
-import { client, MINER, QUANTITY } from "./src/config";
+import { client, MINER, QUANTITY, PROFIT } from "./src/config";
 import { autoconvert } from "./src/actions";
 
 client.streamActionTraces( { accounts: "stablestable", action_names: "receipt" },
@@ -11,7 +11,7 @@ client.streamActionTraces( { accounts: "stablestable", action_names: "receipt" }
 
       if ( action == "convert") {
         console.log(`🚀 *${owner}* converts \`${assets[0]} => ${assets[1]}\``);
-        autoconvert( MINER.actor, QUANTITY );
+        autoconvert( MINER.actor, QUANTITY, PROFIT );
       }
     }
   }

@@ -21,6 +21,7 @@ NODEOS_ENDPOINT="http://localhost:8888"
 MINER="myaccount@active"
 CPU_PAYER="mycpu@active"
 QUANTITY="1.00 USD"
+PROFIT="0.01 USD"
 PRIVATE_KEYS="<PRIVATE KEY>,<PRIVATE KEY>"
 ```
 

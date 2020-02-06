@@ -1,7 +1,7 @@
 import { transact } from "./utils";
 import { AUTHORIZATION } from "./config";
 
-export function autoconvert( owner: string, quantity: string ) {
+export function autoconvert( owner: string, quantity: string, profit: string ) {
     transact([
         {
             account: "stablestable",
@@ -9,7 +9,8 @@ export function autoconvert( owner: string, quantity: string ) {
             authorization: AUTHORIZATION,
             data: {
                 owner,
-                quantity
+                quantity,
+                profit
             }
         }
     ])
