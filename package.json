@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "sx.miner",
+  "version": "0.1.0",
+  "description": "SX - Miner",
+  "main": "index.js",
+  "repository": "git@github.com:stableex/sx.miner.git",
+  "author": "Denis Carriere",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "devDependencies": {
+    "@types/dotenv": "*",
+    "@types/node": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@dfuse/client": "*",
+    "dotenv": "*",
+    "eosjs": "^21.0.1-rc1",
+    "node-fetch": "*",
+    "ws": "*"
+  }
+}
