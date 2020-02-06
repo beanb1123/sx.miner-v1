@@ -18,10 +18,10 @@ DFUSE_TOKEN="<PRIVATE server_xxx>"
 NODEOS_ENDPOINT="http://localhost:8888"
 
 # sx.miner
+MINER="myaccount@active"
+CPU_PAYER="mycpu@active"
 QUANTITY="1.00 USD"
-CPU_PAYER="myaccount@active"
-AUTHORIZATION="myaccount@active"
-PRIVATE_KEYS="<PRIVATE KEY>"
+PRIVATE_KEYS="<PRIVATE KEY>,<PRIVATE KEY>"
 ```
 
 ## Quickstart

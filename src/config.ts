@@ -25,27 +25,33 @@ export const client = createDfuseClient({
 export const endpoint = process.env.NODEOS_ENDPOINT || "http://localhost:8888";
 export const rpc = new JsonRpc(endpoint, { fetch });
 
-if (!process.env.QUANTITY) throw new Error("[QUANTITY] is required");
+if (!process.env.MINER) throw new Error("[MINER] is required");
 if (!process.env.CPU_PAYER) throw new Error("[CPU_PAYER] is required");
-if (!process.env.AUTHORIZATION) throw new Error("[AUTHORIZATION] is required");
+if (!process.env.QUANTITY) throw new Error("[QUANTITY] is required");
 if (!process.env.PRIVATE_KEYS) throw new Error("[PRIVATE_KEYS] is required");
 if (process.env.PRIVATE_KEYS.includes("PRIVATE")) throw new Error("[PRIVATE_KEYS] invalid key")
+
 export const signatureProvider = new JsSignatureProvider(process.env.PRIVATE_KEYS.split(","));
 export const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
-export const AUTHORIZATION = [
-    string_to_permission(process.env.CPU_PAYER),
-    string_to_permission(process.env.AUTHORIZATION)
-]
+export const MINER = string_to_permission(process.env.MINER);
+export const CPU_PAYER = string_to_permission(process.env.CPU_PAYER);
 export const QUANTITY = process.env.QUANTITY;
-export const OWNER = string_to_permission(process.env.AUTHORIZATION).actor;
+export const AUTHORIZATION = [
+    CPU_PAYER,
+    MINER
+]
 
 function string_to_permission( str: string ) {
-    if ( !str.includes("@") ) throw new Error("permission string must include @");
+    if ( !str || !str.includes("@") ) throw new Error("permission string must include @");
     const [ actor, permission ] = str.split("@");
-
-    return {
-        actor,
-        permission,
-    }
+    return { actor, permission }
 }
+
+console.log("Configurations")
+console.log("==============")
+console.log("NODEOS_ENDPOINT:", endpoint);
+console.log("MINER:", MINER);
+console.log("CPU_PAYER:", CPU_PAYER);
+console.log("QUANTITY:", QUANTITY);
+console.log("==============")
