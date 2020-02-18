@@ -22,3 +22,13 @@ export async function transact(actions: Action[]): Promise<string> {
     }
     return trx_id;
 }
+
+export function string_to_permission( str: string ) {
+    if ( !str || !str.includes("@") ) throw new Error("permission string must include @");
+    const [ actor, permission ] = str.split("@");
+    return { actor, permission }
+}
+
+export function timeout( seconds: number ): Promise<void> {
+    return new Promise((resolve) => setTimeout(() => resolve(), seconds * 1000 ))
+}

@@ -13,16 +13,20 @@ npm install
 Create `.env` file
 
 ```bash
-# dfuse
-DFUSE_TOKEN="<PRIVATE server_xxx>"
-NODEOS_ENDPOINT="http://localhost:8888"
-
 # sx.miner
-MINER="myaccount@active"
-CPU_PAYER="mycpu@active"
+CONTRACT="stablestable"
 QUANTITY="1.00 USD"
 PROFIT="0.01 USD"
+INTERVAL_SECONDS=10
+
+# eosjs
+NODEOS_ENDPOINT="http://localhost:8888"
+MINER="myaccount@active"
+CPU_PAYER="mycpu@active"
 PRIVATE_KEYS="<PRIVATE KEY>,<PRIVATE KEY>"
+
+# dfuse (optional)
+DFUSE_TOKEN="<PRIVATE server_xxx>"
 ```
 
 ## Quickstart

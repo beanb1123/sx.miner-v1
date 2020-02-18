@@ -1,18 +1,10 @@
-import { InboundMessageType, InboundMessage, ActionTraceData } from "@dfuse/client";
-import { client, MINER, QUANTITY, PROFIT } from "./src/config";
+import { MINER, QUANTITY, PROFIT, INTERVAL_SECONDS } from "./src/config";
 import { autoconvert } from "./src/actions";
+import { timeout, transact } from "./src/utils";
 
-client.streamActionTraces( { accounts: "stablestable", action_names: "receipt" },
-  (message: InboundMessage<any>) => {
-    if (message.type == InboundMessageType.LISTENING) console.log('\nsx.miner listening...');
-    if (message.type == InboundMessageType.ACTION_TRACE) {
-      const act = (message.data as ActionTraceData<any>).trace.act;
-      const { owner, action, assets } = act.data;
-
-      if ( action == "convert") {
-        console.log(`🚀 *${owner}* converts \`${assets[0]} => ${assets[1]}\``);
-        autoconvert( MINER.actor, QUANTITY, PROFIT );
-      }
-    }
-  }
-)
+async function main() {
+  await transact([ autoconvert( MINER.actor, QUANTITY, PROFIT ) ])
+  await timeout( INTERVAL_SECONDS );
+  main();
+}
+main()
