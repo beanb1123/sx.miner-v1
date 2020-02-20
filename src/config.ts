@@ -17,6 +17,7 @@ export const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecode
 
 export const INTERVAL_SECONDS = Number(process.env.INTERVAL_SECONDS || 10);
 export const CONTRACT = process.env.CONTRACT || "stablestable";
+export const SYMCODES = process.env.SYMCODES ? process.env.SYMCODES.split(",") : [];
 export const MINER = string_to_permission(process.env.MINER);
 export const CPU_PAYER = string_to_permission(process.env.CPU_PAYER);
 export const QUANTITY = process.env.QUANTITY || "1.00 USD";

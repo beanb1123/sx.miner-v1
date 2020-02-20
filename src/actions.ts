@@ -1,7 +1,7 @@
 import { AUTHORIZATION, CONTRACT } from "./config";
 import { Action } from "eosjs/dist/eosjs-serialize";
 
-export function autoconvert( owner: string, quantity: string, profit: string ): Action {
+export function autoconvert( owner: string, quantity: string, symcodes: string[], profit: string ): Action {
     return {
         account: CONTRACT,
         name: "autoconvert",
@@ -9,6 +9,7 @@ export function autoconvert( owner: string, quantity: string, profit: string ): 
         data: {
             owner,
             quantity,
+            symcodes,
             profit
         }
     }
