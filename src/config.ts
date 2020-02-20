@@ -30,6 +30,7 @@ console.log("NODEOS_ENDPOINT:", NODEOS_ENDPOINT);
 console.log("MINER:", MINER);
 console.log("CPU_PAYER:", CPU_PAYER);
 console.log("QUANTITY:", QUANTITY);
+console.log("SYMCODES:", SYMCODES.join(","));
 console.log("PROFIT:", PROFIT);
 console.log("INTERVAL_SECONDS:", INTERVAL_SECONDS);
 console.log("==============")
