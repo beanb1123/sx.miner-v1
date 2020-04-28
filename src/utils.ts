@@ -1,11 +1,10 @@
-import { RpcError } from "eosjs";
+import { RpcError, Api } from "eosjs";
 import { Action } from "eosjs/dist/eosjs-serialize";
-import { api } from "./config";
 
 /**
  * Transaction
  */
-export async function transact(actions: Action[]): Promise<string> {
+export async function transact(api: Api, actions: Action[]): Promise<string> {
     let trx_id: string;
     try {
         const result = await api.transact({actions}, { blocksBehind: 3, expireSeconds: 30 });

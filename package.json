@@ -17,9 +17,13 @@
   },
   "dependencies": {
     "@dfuse/client": "*",
+    "decimal.js": "^10.2.0",
     "dotenv": "*",
+    "eos-common": "^0.7.6",
     "eosjs": "^21.0.1-rc1",
+    "long": "^4.0.0",
     "node-fetch": "*",
+    "sxjs": "^0.6.1",
     "ws": "*"
   }
 }
