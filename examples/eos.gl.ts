@@ -15,12 +15,14 @@ import { asset, symbol_code, Asset } from "eos-common";
 
     // contract inputs
     const symcode_mining = symbol_code("GL");
-    const trading_fee = 30;
-    const mining_rewards = 11000;
+    const settings = {
+        fee: 30,
+        mining_rewards: 11000
+    }
 
     // calculations
-    const { fee, out } = calculate_rate( quantity, symcode_out, EOS, FAST, trading_fee );
-    const mining = calculate_mining_rewards( fee, symcode_mining, EOS, GL, mining_rewards );
+    const { fee, out } = calculate_rate( quantity, symcode_out, EOS, FAST, settings.fee );
+    const mining = calculate_mining_rewards( fee, symcode_mining, EOS, GL, settings.mining_rewards );
 
     // logs
     console.log("out:", out.to_string());
