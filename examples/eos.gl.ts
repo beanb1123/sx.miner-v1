@@ -1,7 +1,7 @@
 import { rpc } from "./config"
-import { calculate_rate, calculate_mining_rewards, calculate_out } from "../plugins/eos.gl"
+import { calculate_rate, calculate_mining_rewards, calculate_out, get_settings } from "../plugins/eos.gl"
 import { get_balance } from "../plugins/eosio.token"
-import { asset, symbol_code, Asset } from "eos-common";
+import { asset, symbol_code } from "eos-common";
 
 
 (async () => {
@@ -15,10 +15,7 @@ import { asset, symbol_code, Asset } from "eos-common";
 
     // contract inputs
     const symcode_mining = symbol_code("GL");
-    const settings = {
-        fee: 30,
-        mining_rewards: 11000
-    }
+    const settings = await get_settings( rpc );
 
     // calculations
     const { fee, out } = calculate_rate( quantity, symcode_out, EOS, FAST, settings.fee );

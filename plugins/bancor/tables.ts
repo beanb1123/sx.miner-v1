@@ -19,8 +19,8 @@ interface Reserve {
 
 export async function get_reserves( rpc: JsonRpc, token_code: string ) {
     const code = "bancorcnvrtr";
-    const table = "reserves";
     const scope = token_code;
+    const table = "reserves";
     const result: GetTableRows<Reserve> = await rpc.get_table_rows({ json: true, code, scope, table });
 
     return result.rows.map(row => {
