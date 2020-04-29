@@ -1,5 +1,5 @@
 import { rpc } from "./config"
-import { calculate_rate, calculate_mining_rewards } from "../plugins/eos.gl"
+import { calculate_rate, calculate_mining_rewards, calculate_out } from "../plugins/eos.gl"
 import { get_balance } from "../plugins/eosio.token"
 import { asset, symbol_code, Asset } from "eos-common";
 
@@ -23,9 +23,13 @@ import { asset, symbol_code, Asset } from "eos-common";
     // calculations
     const { fee, out } = calculate_rate( quantity, symcode_out, EOS, FAST, settings.fee );
     const mining = calculate_mining_rewards( fee, symcode_mining, EOS, GL, settings.mining_rewards );
+    const burn = calculate_out( fee, symbol_code("FAST"), EOS, FAST );
 
     // logs
+    console.log("quantity:", quantity.to_string());
+    console.log("symcode_out:", symcode_out.to_string());
     console.log("out:", out.to_string());
     console.log("fee:", fee.to_string());
     console.log("mining:", mining.to_string());
+    console.log("burn:", burn.to_string());
 })();
