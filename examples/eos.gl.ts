@@ -18,13 +18,9 @@ import { asset, symbol_code, Asset } from "eos-common";
     const trading_fee = 30;
     const mining_rewards = 11000;
 
-    // must add incoming quantity to base
-    // token transfer increases token balance of contract
-    const base = Asset.plus( EOS, quantity );
-
     // calculations
-    const { fee, out } = calculate_rate( quantity, symcode_out, base, FAST, trading_fee );
-    const mining = calculate_mining_rewards( fee, symcode_mining, base, GL, mining_rewards );
+    const { fee, out } = calculate_rate( quantity, symcode_out, EOS, FAST, trading_fee );
+    const mining = calculate_mining_rewards( fee, symcode_mining, EOS, GL, mining_rewards );
 
     // logs
     console.log("out:", out.to_string());
