@@ -1,5 +1,5 @@
-import { SymbolCode, Asset, asset_to_number, number_to_asset, asset } from "eos-common";
-import { get_symbol } from "../../src/tokens";
+import { SymbolCode, Asset, asset_to_number, number_to_asset } from "eos-common";
+import { get_symbol } from "./tokens";
 
 export function calculate_out( quantity: Asset, symcode_out: SymbolCode, base: Asset, quote: Asset )
 {
@@ -17,6 +17,11 @@ export function calculate_mining_rewards( fee: Asset, symcode_mining: SymbolCode
 {
     const calculated_fee = Asset.times( fee, mining_rewards ).div( 10000 );
     return calculate_out( calculated_fee, symcode_mining, base, quote );
+}
+
+export function calculate_burn( fee: Asset, base: Asset, quote: Asset )
+{
+    return calculate_out( fee, quote.symbol.code(), base, quote );
 }
 
 export function calculate_fee( quantity: Asset, fee = 30 )

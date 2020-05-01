@@ -1,5 +1,5 @@
 import { SymbolCode, Asset, asset_to_number, number_to_asset, asset } from "eos-common";
-import { get_symbol } from "../../src/tokens";
+import { get_symbol } from "../eos.gl/tokens";
 
 export function calculate_out( quantity: Asset, symcode_out: SymbolCode, base: Asset, quote: Asset )
 {
@@ -11,11 +11,6 @@ export function calculate_out( quantity: Asset, symcode_out: SymbolCode, base: A
     // Bancor V1 Formula
     const out_amount = in_amount / (base_num + in_amount) * quote_num;
     return number_to_asset( out_amount, get_symbol( symcode_out ) );
-}
-
-export function calculate_mining_rewards( fee: Asset, symcode_mining: SymbolCode, base: Asset, quote: Asset, mining_rewards = 11000 )
-{
-    return calculate_out( fee.times( mining_rewards ).div( 10000 ), symcode_mining, base, quote );
 }
 
 export function calculate_fee( quantity: Asset, fee = 30 )

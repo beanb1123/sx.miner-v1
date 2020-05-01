@@ -1,5 +1,5 @@
 import { JsonRpc } from "eosjs";
-import { name, asset } from "eos-common";
+import { name, asset, Asset } from "eos-common";
 
 // export async function get_reserve( rpc: JsonRpc, token_code: string, symcode: string ) {
 //     return asset((await rpc.get_currency_balance(code, account, symbol))[0]);
@@ -23,11 +23,10 @@ export async function get_reserves( rpc: JsonRpc, token_code: string ) {
     const table = "reserves";
     const result: GetTableRows<Reserve> = await rpc.get_table_rows({ json: true, code, scope, table });
 
-    return result.rows.map(row => {
-        return {
-            contract: name(row.contract),
-            ratio: Number(row.ratio),
-            balance: asset(row.balance),
-        }
-    })
+    const reserves: {[symcode: string]: Asset } = {};
+    for ( const row of result.rows ) {
+        const symcode = asset(row.balance).symbol.code();
+        reserves[symcode.to_string()] = asset(row.balance);
+    }
+    return reserves;
 }
