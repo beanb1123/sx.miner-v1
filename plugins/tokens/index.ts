@@ -6,7 +6,10 @@ export const tokens: { [symcode: string]: ExtendedSymbol } = {
     "GL": new ExtendedSymbol("4,GL", "token.gl"),
     "USDT": new ExtendedSymbol("4,USDT", "tethertether"),
     "BNT": new ExtendedSymbol("10,BNT", "bntbntbntbnt"),
-    "PBTC": new ExtendedSymbol("8,PBTC", "btc.ptokens")
+    "PBTC": new ExtendedSymbol("8,PBTC", "btc.ptokens"),
+    "CHEX": new ExtendedSymbol("8,CHEX", "chexchexchex"),
+    "USDB": new ExtendedSymbol("4,USDB", "usdbusdbusdb"),
+    "SENSE": new ExtendedSymbol("4,SENSE", "sensegenesis")
 }
 
 export function get_symbol( symcode: SymbolCode ) {
