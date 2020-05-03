@@ -16,7 +16,9 @@ export const miners: Miners = {
         "BNTEOS": require("./eos.gl/bancor/BNT-EOS"),
         "EOSBNT": require("./eos.gl/bancor/EOS-BNT"),
         "BNTEOSDT": require("./eos.gl/bancor/BNT-EOSDT"),
-        "EOSDTBNT": require("./eos.gl/bancor/EOSDT-BNT")
+        "EOSDTBNT": require("./eos.gl/bancor/EOSDT-BNT"),
+        "BNTUSDT": require("./eos.gl/bancor/BNT-USDT"),
+        "USDTBNT": require("./eos.gl/bancor/USDT-BNT")
     },
     "newdex": {
         "EOSEOSDT": require("./eos.gl/newdex/EOS-EOSDT"),

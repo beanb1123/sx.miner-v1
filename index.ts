@@ -10,12 +10,12 @@ new CronJob('*/1 * * * *', async () => {
                 try {
                     const trx_id = await miners[exchange][pair].mine(ACCOUNT);
                     if ( !trx_id ) break;
-                    await timeout(10);
+                    await timeout(5);
                 } catch (e) {
-                    console.error(e)
-                    await timeout(10);
+                    break;
                 }
             }
+            await timeout(0.5);
         }
     }
 }, null, true).fireOnTick();
