@@ -1,5 +1,5 @@
 import { transact } from "./transact";
-import { asset, name, Name, number_to_asset } from "eos-common";
+import { name, Name, number_to_asset } from "eos-common";
 import { tokens } from "../../../src/tokens"
 import { ACCOUNT } from "../../../src/config";
 
