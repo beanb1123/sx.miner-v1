@@ -1,11 +1,23 @@
 # SX - Miner
 
-## Examples
+## `.env` settings
 
-- [eos.gl](examples/eos.gl.ts)
+```bash
+# miner
+NODEOS_ENDPOINT="https://eos.greymass.com"
+PRIVATE_KEYS="<@active PRIVATE KEY>"
+ACCOUNT="<MINER ACCOUNT>"
+```
 
-## Plugins
+## Install
 
-- `actions`
-- `convert`
-- `tables`
+```
+$ pm2 install typescript
+$ npm install
+```
+
+## Quickstart
+
+```
+$ npm start
+```
