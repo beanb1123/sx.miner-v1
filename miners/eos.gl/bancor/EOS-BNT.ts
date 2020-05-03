@@ -1,12 +1,14 @@
 import { transact } from "./transact";
-import { asset, name, Name, extended_symbol } from "eos-common";
+import { asset, name, Name } from "eos-common";
+import { tokens } from "../../../src/tokens"
+import { ACCOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    const EOS = extended_symbol("4,EOS", "eosio.token");
-    const BNT = extended_symbol("10,BNT", "bntbntbntbnt");
+    const EOS = tokens["EOS"];
+    const BNT = tokens["BNT"];
     await transact( account, asset("1.0000 EOS"), EOS, BNT, name("bnt2eoscnvrt") );
 }
 
-(async () => {
-    await mine(name("miner.gl"))
-})()
+if (require.main === module) {
+    mine(ACCOUNT);
+}

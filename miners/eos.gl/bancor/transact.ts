@@ -19,8 +19,8 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
 
     // actions
     const actions = [
-        gl.marketbuy( account, base_ext_sym.get_contract(), quantity, quote_ext_sym.get_symbol().code() ),
-        bancor.marketbuy( account, quote_ext_sym.get_contract(), out, reserve, base.symbol.code() ),
+        gl.buymarket( account, base_ext_sym.get_contract(), quantity, quote_ext_sym.get_symbol().code() ),
+        bancor.buymarket( account, quote_ext_sym.get_contract(), out, reserve, base.symbol.code() ),
         flash.checkbalance( account, base_ext_sym.get_contract(), balance )
     ]
     // push transaction

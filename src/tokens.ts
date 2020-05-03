@@ -1,11 +1,12 @@
 
 import { ExtendedSymbol, SymbolCode } from "eos-common";
 
-const tokens: { [symcode: string]: ExtendedSymbol } = {
+export const tokens: { [symcode: string]: ExtendedSymbol } = {
     "FAST": new ExtendedSymbol("4,FAST", "fastecoadmin"),
     "EOS": new ExtendedSymbol("4,EOS", "eosio.token"),
     "GL": new ExtendedSymbol("4,GL", "token.gl"),
     "USDT": new ExtendedSymbol("4,USDT", "tethertether"),
+    "EOSDT": new ExtendedSymbol("9,EOSDT", "eosdtsttoken"),
     "BNT": new ExtendedSymbol("10,BNT", "bntbntbntbnt"),
     "PBTC": new ExtendedSymbol("8,PBTC", "btc.ptokens"),
     "CHEX": new ExtendedSymbol("8,CHEX", "chexchexchex"),

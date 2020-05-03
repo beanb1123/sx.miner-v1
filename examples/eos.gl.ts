@@ -1,15 +1,15 @@
 import { rpc } from "../src/config"
 import { calculate_rate, calculate_mining_rewards, get_settings, calculate_burn } from "../plugins/eos.gl"
 import { get_balance } from "../plugins/eosio.token"
-import { asset, symbol_code, asset_to_number } from "eos-common";
+import { asset, symbol_code, asset_to_number, name } from "eos-common";
 
 (async () => {
-    const EOS = await get_balance(rpc, "eosio.token", "eos.gl", "EOS");
-    const FAST = await get_balance(rpc, "fastecoadmin", "eos.gl", "FAST");
-    const USDT = await get_balance(rpc, "tethertether", "eos.gl", "USDT");
-    const PBTC = await get_balance(rpc, "btc.ptokens", "eos.gl", "PBTC");
-    const BNT = await get_balance(rpc, "bntbntbntbnt", "eos.gl", "BNT");
-    const GL = await get_balance(rpc, "token.gl", "eos.gl", "GL");
+    const EOS = await get_balance(rpc, name("eosio.token"), name("eos.gl"), symbol_code("EOS"));
+    const FAST = await get_balance(rpc, name("fastecoadmin"), name("eos.gl"), symbol_code("FAST"));
+    const USDT = await get_balance(rpc, name("tethertether"), name("eos.gl"), symbol_code("USDT"));
+    const PBTC = await get_balance(rpc, name("btc.ptokens"), name("eos.gl"), symbol_code("PBTC"));
+    const BNT = await get_balance(rpc, name("bntbntbntbnt"), name("eos.gl"), symbol_code("BNT"));
+    const GL = await get_balance(rpc, name("token.gl"), name("eos.gl"), symbol_code("GL"));
 
     for (const [base, quote] of [[EOS, FAST], [EOS, USDT], [EOS, BNT], [EOS, PBTC]]) {
         // user inputs
