@@ -13,21 +13,27 @@ interface Miners {
 
 export const miners: Miners = {
     "bancor": {
-        "BNTEOS": require("./eos.gl/bancor/BNT-EOS"),
-        "EOSBNT": require("./eos.gl/bancor/EOS-BNT"),
-        "BNTEOSDT": require("./eos.gl/bancor/BNT-EOSDT"),
-        "EOSDTBNT": require("./eos.gl/bancor/EOSDT-BNT"),
-        "BNTUSDT": require("./eos.gl/bancor/BNT-USDT"),
-        "USDTBNT": require("./eos.gl/bancor/USDT-BNT")
+        "BNT-EOS": require("./eos.gl/bancor/BNT-EOS"),
+        "EOS-BNT": require("./eos.gl/bancor/EOS-BNT"),
+        "BNT-EOSDT": require("./eos.gl/bancor/BNT-EOSDT"),
+        "EOSDT-BNT": require("./eos.gl/bancor/EOSDT-BNT"),
+        "BNT-USDT": require("./eos.gl/bancor/BNT-USDT"),
+        "USDT-BNT": require("./eos.gl/bancor/USDT-BNT")
     },
     "newdex": {
-        "EOSEOSDT": require("./eos.gl/newdex/EOS-EOSDT"),
-        "EOSFAST": require("./eos.gl/newdex/EOS-FAST"),
-        "EOSDTEOS": require("./eos.gl/newdex/EOSDT-EOS"),
-        "FASTEOS": require("./eos.gl/newdex/FAST-EOS"),
+        "EOS-EOSDT": require("./eos.gl/newdex/EOS-EOSDT"),
+        "EOS-FAST": require("./eos.gl/newdex/EOS-FAST"),
+        "EOSDT-EOS": require("./eos.gl/newdex/EOSDT-EOS"),
+        "FAST-EOS": require("./eos.gl/newdex/FAST-EOS"),
     },
     "stable.sx": {
-        "EOSDTUSDT": require("./eos.gl/stable.sx/EOSDT-USDT"),
-        "USDTEOSDT": require("./eos.gl/stable.sx/USDT-EOSDT")
+        "EOSDT-USDT": require("./eos.gl/stable.sx/EOSDT-USDT"),
+        "USDT-EOSDT": require("./eos.gl/stable.sx/USDT-EOSDT")
+    },
+    "yolo": {
+        "BNT-EOS": require("./eos.gl/yolo/BNT-EOS"),
+        "EOS-BNT": require("./eos.gl/yolo/EOS-BNT"),
+        "EOS-EOSDT": require("./eos.gl/yolo/EOS-EOSDT"),
+        "EOSDT-EOS": require("./eos.gl/yolo/EOSDT-EOS"),
     }
 }
