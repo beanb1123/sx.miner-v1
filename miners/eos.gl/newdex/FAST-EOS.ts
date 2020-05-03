@@ -1,12 +1,14 @@
 import { transact } from "./transact";
-import { asset, Name } from "eos-common";
+import { asset, Name, number_to_asset } from "eos-common";
 import { tokens } from "../../../src/tokens"
 import { ACCOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    const quantity = asset("50000.0000 FAST");
     const base = tokens["FAST"];
     const quote = tokens["EOS"];
+    const quantity = number_to_asset(50000, base.get_symbol());
+
+    // newdex
     const code = "fastecoadmin-fast-eos";
     const type = "buy";
 
