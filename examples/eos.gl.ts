@@ -1,7 +1,7 @@
-import { rpc } from "./config"
-import { calculate_rate, calculate_mining_rewards, calculate_out, get_settings, calculate_burn } from "../plugins/eos.gl"
+import { rpc } from "../src/config"
+import { calculate_rate, calculate_mining_rewards, get_settings, calculate_burn } from "../plugins/eos.gl"
 import { get_balance } from "../plugins/eosio.token"
-import { asset, symbol_code } from "eos-common";
+import { asset, symbol_code, asset_to_number } from "eos-common";
 
 (async () => {
     const EOS = await get_balance(rpc, "eosio.token", "eos.gl", "EOS");
@@ -34,7 +34,7 @@ import { asset, symbol_code } from "eos-common";
             console.log("mining:", mining.to_string());
             console.log("burn:", burn.to_string());
         } else {
-            console.log("1 EOS @ " + out.to_string());
+            console.log(`1 EOS @ ${out.to_string()} (${ 1 / asset_to_number(out) })`);
         }
     }
 })();

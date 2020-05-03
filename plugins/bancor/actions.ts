@@ -1,5 +1,9 @@
 import { transfer } from "../eosio.token/actions";
+import { Name, Asset, name, SymbolCode } from "eos-common";
 
-export function marketbuy( from: string, ext_quantity: { contract: string, quantity: string }, symcode: string ) {
-    return transfer(from, "bancorcnvrtr", ext_quantity, symcode )
+export function marketbuy( from: Name, contract: Name, quantity: Asset, reserve: Name, symcode: SymbolCode ) {
+    const memo = `1,${reserve} ${symcode},0.0,${from}`;
+    return transfer(from, name("thisisbancor"), contract, quantity, memo )
 }
+// bancorcnvrtr
+// bnt2eoscnvrt

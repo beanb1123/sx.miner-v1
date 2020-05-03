@@ -1,7 +1,6 @@
-import { rpc } from "./config"
+import { rpc } from "../src/config"
 import { get_reserves, calculate_rate } from "../plugins/bancor"
 import { asset, asset_to_number } from "eos-common";
-
 
 (async () => {
     const EOSBNT = await get_reserves( rpc, "EOSBNT");

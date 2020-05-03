@@ -1,5 +1,6 @@
 import { transfer } from "../eosio.token/actions";
+import { Name, SymbolCode, Asset, name } from "eos-common";
 
-export function marketbuy( from: string, ext_quantity: { contract: string, quantity: string }, symcode: string ) {
-    return transfer(from, "eos.gl", ext_quantity, symcode )
+export function marketbuy( from: Name, contract: Name, quantity: Asset, symcode: SymbolCode ) {
+    return transfer(from, name("eos.gl"), contract, quantity, symcode.to_string() )
 }

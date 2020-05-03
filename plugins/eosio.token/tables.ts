@@ -1,6 +1,6 @@
 import { JsonRpc } from "eosjs";
-import { Name, asset, SymbolCode } from "eos-common";
+import { asset, Name, SymbolCode } from "eos-common";
 
-export async function get_balance( rpc: JsonRpc, code: string, account: string, symbol?: string ) {
-    return asset((await rpc.get_currency_balance(code, account, symbol))[0]);
+export async function get_balance( rpc: JsonRpc, code: Name, account: Name, symbol?: SymbolCode ) {
+    return asset((await rpc.get_currency_balance(code.to_string(), account.to_string(), symbol.to_string()))[0]);
 }

@@ -1,6 +1,7 @@
-import { SymbolCode, ExtendedSymbol } from "eos-common";
 
-export const tokens: { [symcode: string]: ExtendedSymbol } = {
+import { ExtendedSymbol, SymbolCode } from "eos-common";
+
+const tokens: { [symcode: string]: ExtendedSymbol } = {
     "FAST": new ExtendedSymbol("4,FAST", "fastecoadmin"),
     "EOS": new ExtendedSymbol("4,EOS", "eosio.token"),
     "GL": new ExtendedSymbol("4,GL", "token.gl"),
@@ -17,5 +18,5 @@ export function get_symbol( symcode: SymbolCode ) {
 }
 
 export function get_contract( symcode: SymbolCode ) {
-    return tokens[symcode.to_string()].get_contract();
+    return tokens[symcode.to_string()].get_contract().to_string();
 }

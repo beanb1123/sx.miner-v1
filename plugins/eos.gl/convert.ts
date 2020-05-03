@@ -1,5 +1,5 @@
 import { SymbolCode, Asset, asset_to_number, number_to_asset } from "eos-common";
-import { get_symbol } from "../tokens";
+import { get_symbol } from "../../src/tokens";
 
 export function calculate_out( quantity: Asset, symcode_out: SymbolCode, base: Asset, quote: Asset )
 {
