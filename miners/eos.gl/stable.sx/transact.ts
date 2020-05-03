@@ -25,5 +25,5 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
     ]
     // console.log(JSON.stringify(actions, null, 4));
     // push transaction
-    utils.transact( api, actions )
+    return utils.transact( api, actions )
 }

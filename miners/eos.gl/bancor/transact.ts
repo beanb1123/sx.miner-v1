@@ -24,5 +24,5 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
         flash.checkbalance( account, base_ext_sym.get_contract(), balance )
     ]
     // push transaction
-    utils.transact( api, actions )
+    return utils.transact( api, actions )
 }
