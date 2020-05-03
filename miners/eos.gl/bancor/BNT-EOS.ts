@@ -4,9 +4,12 @@ import { tokens } from "../../../src/tokens"
 import { ACCOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    const BNT = tokens["BNT"];
-    const EOS = tokens["EOS"];
-    await transact( account, asset("10.0000000000 BNT"), BNT, EOS, name("bnt2eoscnvrt"));
+    const quantity = asset("10.0000000000 BNT");
+    const base = tokens["BNT"];
+    const quote = tokens["EOS"];
+    const reserve = name("bnt2eoscnvrt");
+
+    await transact( account, quantity, base, quote, reserve);
 }
 
 if (require.main === module) {

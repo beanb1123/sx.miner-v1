@@ -4,10 +4,10 @@ import { tokens } from "../../../src/tokens"
 import { ACCOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    const quantity = asset("1.0000 EOS");
-    const base = tokens["EOS"];
-    const quote = tokens["EOSDT"];
-    const code = "eosio.token-eos-eosdt";
+    const quantity = asset("50000.0000 FAST");
+    const base = tokens["FAST"];
+    const quote = tokens["EOS"];
+    const code = "fastecoadmin-fast-eos";
     const type = "buy";
 
     await transact( account, quantity, base, quote, code, type );
