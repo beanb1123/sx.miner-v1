@@ -3,7 +3,7 @@ import { ACCOUNT } from "./src/config"
 import { timeout } from "./src/utils"
 import { CronJob } from "cron"
 
-new CronJob('*/1 * * * *', async () => {
+new CronJob('*/2 * * * *', async () => {
     for ( const exchange of Object.keys( miners )) {
         for ( const pair of Object.keys( miners[ exchange ]) ) {
             while ( true ) {
@@ -15,7 +15,7 @@ new CronJob('*/1 * * * *', async () => {
                     break;
                 }
             }
-            await timeout(0.5);
+            await timeout(0.2);
         }
     }
 }, null, true).fireOnTick();

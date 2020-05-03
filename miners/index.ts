@@ -12,13 +12,17 @@ interface Miners {
 }
 
 export const miners: Miners = {
-    "bancor": {
-        "BNT-EOS": require("./eos.gl/bancor/BNT-EOS"),
-        "EOS-BNT": require("./eos.gl/bancor/EOS-BNT"),
-        "BNT-EOSDT": require("./eos.gl/bancor/BNT-EOSDT"),
-        "EOSDT-BNT": require("./eos.gl/bancor/EOSDT-BNT"),
-        "BNT-USDT": require("./eos.gl/bancor/BNT-USDT"),
-        "USDT-BNT": require("./eos.gl/bancor/USDT-BNT")
+    "bancor.v1": {
+        "BNT-EOS": require("./eos.gl/bancor.v1/BNT-EOS"),
+        "EOS-BNT": require("./eos.gl/bancor.v1/EOS-BNT"),
+        "BNT-EOSDT": require("./eos.gl/bancor.v1/BNT-EOSDT"),
+        "EOSDT-BNT": require("./eos.gl/bancor.v1/EOSDT-BNT"),
+        "BNT-USDT": require("./eos.gl/bancor.v1/BNT-USDT"),
+        "USDT-BNT": require("./eos.gl/bancor.v1/USDT-BNT")
+    },
+    "bancor.v2": {
+        "BNT-EOS": require("./eos.gl/bancor.v2/BNT-EOS"),
+        "EOS-BNT": require("./eos.gl/bancor.v2/EOS-BNT"),
     },
     "newdex": {
         "EOS-EOSDT": require("./eos.gl/newdex/EOS-EOSDT"),
