@@ -9,7 +9,7 @@ export async function mine( account: Name ) {
     const quantity = number_to_asset(1, base.get_symbol());
 
     // bancor
-    const reserve = name("bnt2eoscnvrt");
+    const reserve = "bnt2eoscnvrt";
 
     return await transact( account, quantity, base, quote, reserve);
 }

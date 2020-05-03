@@ -3,7 +3,7 @@ import { rpc, api } from "../../../src/config"
 import { gl, bancor, flash, token } from "../../../plugins"
 import * as utils from "../../../src/utils";
 
-export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, reserve: Name ) {
+export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, reserve: string ) {
     // settings
     const settings = await gl.get_settings(rpc);
 
