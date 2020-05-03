@@ -23,7 +23,7 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
         stable.buymarket( account, quote_ext_sym.get_contract(), out, base.symbol.code() ),
         flash.checkbalance( account, base_ext_sym.get_contract(), balance )
     ]
-    // console.log(JSON.stringify(actions, null, 4));
+
     // push transaction
     return utils.transact( api, actions )
 }

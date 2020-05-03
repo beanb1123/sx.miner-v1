@@ -10,7 +10,7 @@ export async function mine( account: Name ) {
     const code = "fastecoadmin-fast-eos";
     const type = "buy";
 
-    await transact( account, quantity, base, quote, code, type );
+    return await transact( account, quantity, base, quote, code, type );
 }
 
 if (require.main === module) {

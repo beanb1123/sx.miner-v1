@@ -1,15 +1,16 @@
 import { transact } from "./transact";
-import { asset, name, Name } from "eos-common";
+import { asset, name, Name, number_to_asset } from "eos-common";
 import { tokens } from "../../../src/tokens"
 import { ACCOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    const quantity = asset("10.0000000000 BNT");
     const base = tokens["BNT"];
     const quote = tokens["EOS"];
+
+    const quantity = number_to_asset(10, base.get_symbol());
     const reserve = name("bnt2eoscnvrt");
 
-    await transact( account, quantity, base, quote, reserve);
+    return await transact( account, quantity, base, quote, reserve);
 }
 
 if (require.main === module) {

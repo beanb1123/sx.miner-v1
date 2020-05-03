@@ -8,7 +8,7 @@ export async function mine( account: Name ) {
     const base = tokens["EOSDT"];
     const quote = tokens["USDT"];
 
-    await transact( account, quantity, base, quote );
+    return await transact( account, quantity, base, quote );
 }
 
 if (require.main === module) {
