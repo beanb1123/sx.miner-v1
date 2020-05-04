@@ -17,12 +17,14 @@ export const miners: Miners = {
         "EOS-BNT": require("./eos.gl/bancor.v1/EOS-BNT"),
         "BNT-EOSDT": require("./eos.gl/bancor.v1/BNT-EOSDT"),
         "EOSDT-BNT": require("./eos.gl/bancor.v1/EOSDT-BNT"),
-        "BNT-USDT": require("./eos.gl/bancor.v1/BNT-USDT"),
-        "USDT-BNT": require("./eos.gl/bancor.v1/USDT-BNT")
+        // "BNT-USDT": require("./eos.gl/bancor.v1/BNT-USDT"),
+        // "USDT-BNT": require("./eos.gl/bancor.v1/USDT-BNT")
     },
     "bancor.v2": {
         "BNT-EOS": require("./eos.gl/bancor.v2/BNT-EOS"),
         "EOS-BNT": require("./eos.gl/bancor.v2/EOS-BNT"),
+        // "USDT-BNT": require("./eos.gl/bancor.v2/USDT-BNT"),
+        // "BNT-USDT": require("./eos.gl/bancor.v2/BNT-USDT"),
     },
     "newdex": {
         "EOS-EOSDT": require("./eos.gl/newdex/EOS-EOSDT"),
@@ -30,10 +32,10 @@ export const miners: Miners = {
         "EOSDT-EOS": require("./eos.gl/newdex/EOSDT-EOS"),
         "FAST-EOS": require("./eos.gl/newdex/FAST-EOS"),
     },
-    "stable.sx": {
-        "EOSDT-USDT": require("./eos.gl/stable.sx/EOSDT-USDT"),
-        "USDT-EOSDT": require("./eos.gl/stable.sx/USDT-EOSDT")
-    },
+    // "stable.sx": {
+    //     "EOSDT-USDT": require("./eos.gl/stable.sx/EOSDT-USDT"),
+    //     "USDT-EOSDT": require("./eos.gl/stable.sx/USDT-EOSDT")
+    // },
     "yolo": {
         "BNT-EOS": require("./eos.gl/yolo/BNT-EOS"),
         "EOS-BNT": require("./eos.gl/yolo/EOS-BNT"),
