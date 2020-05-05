@@ -31,6 +31,9 @@ export const miners: Miners = {
     "stable.sx-bancor.v1": {
         "BNT-EOSDT-USDT": require("./eos.gl/stable.sx/bancor.v1/BNT-EOSDT-USDT"),
     },
+    "stable.sx-bancor.v2": {
+        "BNT-EOSDT-USDB": require("./eos.gl/stable.sx/bancor.v2/BNT-EOSDT-USDB"),
+    },
     "stable.sx-newdex.swap": {
         "EOS-EOSDT-USN": require("./eos.gl/stable.sx/newdex.swap/EOS-EOSDT-USN"),
     },
