@@ -18,6 +18,11 @@ export const tokens: { [symcode: string]: ExtendedSymbol } = {
     "TPT": new ExtendedSymbol("4,TPT", "eosiotptoken"),
     "BG": new ExtendedSymbol("4,BG", "bgbgbgbgbgbg"),
     "NDX": new ExtendedSymbol("4,NDX", "newdexissuer"),
+    "USDE": new ExtendedSymbol("4,USDE", "usdetotokens"),
+    "PIZZA": new ExtendedSymbol("4,PIZZA", "pizzatotoken"),
+    "EIDOS": new ExtendedSymbol("4,EIDOS", "eidosonecoin"),
+    "POOL": new ExtendedSymbol("4,POOL", "stpool.eos"),
+    "YAS": new ExtendedSymbol("4,YAS", "yastokencode"),
 }
 
 export function get_symbol( symcode: SymbolCode ) {

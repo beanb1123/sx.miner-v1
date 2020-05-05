@@ -10,12 +10,13 @@ export async function mine( account: Name ) {
     const quantity = number_to_asset(1, base.get_symbol()); // EOS => EOSDT
 
     // stable.sx
-    const sx = tokens["USN"]; // EOSDT => USN
+    const sx = tokens["USDE"]; // EOSDT => USDE
 
-    // newdex.swap
-    const pair_id = 6; // USN => EOS
+    // pizzadex
+    const type = "buy";
+    const pair = "eos2usde"; // USDE => EOS
 
-    return await transact( account, quantity, base, quote, sx, pair_id );
+    return await transact( account, quantity, base, quote, sx, type, pair );
 }
 
 if (require.main === module) {

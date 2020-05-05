@@ -6,5 +6,6 @@ import * as newdex from "./newdex"
 import * as swapNewdex from "./swap.newdex"
 import * as stable from "./stable.sx"
 import * as yolo from "./yolo"
+import * as pizzadex from "./pizzadex"
 
-export { bancor, flash, token, gl, swapNewdex, newdex, stable, yolo }
+export { bancor, flash, token, gl, swapNewdex, newdex, stable, yolo, pizzadex }
