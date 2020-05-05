@@ -1,7 +1,7 @@
 import { transfer } from "../eosio.token/actions";
-import { Name, Asset, name } from "eos-common";
+import { Name, Asset, name, ExtendedSymbol } from "eos-common";
 
-export function buymarket( from: Name, contract: Name, quantity: Asset, code = "eosio.token-eos-eosdt" ) {
-    const memo = `{"type":"sell-market","symbol":"${code}","price":"0.0000","channel":"sx"}`;
-    return transfer(from, name("newdexpublic"), contract, quantity, memo )
+export function buymarket( from: Name, contract: Name, quantity: Asset, extsym: ExtendedSymbol, pair_id = 6 ) {
+    const memo = `swap-${extsym.get_contract()}-${extsym.get_symbol().code()}-${pair_id}`;
+    return transfer(from, name("swap.newdex"), contract, quantity, memo )
 }
