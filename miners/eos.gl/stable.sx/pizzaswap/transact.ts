@@ -1,10 +1,10 @@
 import { name, Asset, Name, ExtendedSymbol } from "eos-common";
 import * as sx from "sxjs";
 import { rpc, api } from "../../../../src/config"
-import { gl, flash, stable, token, pizzadex } from "../../../../plugins"
+import { gl, flash, stable, token, pizzaswap } from "../../../../plugins"
 import * as utils from "../../../../src/utils";
 
-export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, sx_ext_sym: ExtendedSymbol, pair: string, type: string ) {
+export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, sx_ext_sym: ExtendedSymbol, pair: string, price: number ) {
     // settings
     const gl_settings = await gl.get_settings(rpc);
 
@@ -27,7 +27,7 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
     const actions = [
         gl.buymarket( account, base_ext_sym.get_contract(), quantity, quote.symbol.code() ),
         stable.buymarket( account, quote_ext_sym.get_contract(), out, sx_ext_sym.get_symbol().code() ),
-        pizzadex.buymarket( account, sx_ext_sym.get_contract(), sx_rate.out, pair, type ),
+        pizzaswap.buymarket( account, sx_ext_sym.get_contract(), sx_rate.out, pair, price ),
         flash.checkbalance( account, base_ext_sym.get_contract(), base_balance ),
     ]
 

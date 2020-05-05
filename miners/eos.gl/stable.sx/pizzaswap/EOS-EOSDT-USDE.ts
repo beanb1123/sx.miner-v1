@@ -1,7 +1,8 @@
-import { Name, number_to_asset } from "eos-common";
+import { Name, number_to_asset, asset, name } from "eos-common";
 import { transact } from "./transact";
 import { tokens } from "../../../../src/tokens"
-import { ACCOUNT } from "../../../../src/config";
+import { ACCOUNT, rpc } from "../../../../src/config";
+import { pizzaswap } from "../../../../plugins"
 
 export async function mine( account: Name ) {
     // gl.swap
@@ -14,9 +15,11 @@ export async function mine( account: Name ) {
 
     // pizzadex
     const pair = "eos2usde"; // USDE => EOS
-    const type = "buy";
 
-    return await transact( account, quantity, base, quote, sx, pair, type );
+    // calculate EOS price
+    const price = await pizzaswap.get_price( rpc );
+
+    return await transact( account, quantity, base, quote, sx, pair, price );
 }
 
 if (require.main === module) {

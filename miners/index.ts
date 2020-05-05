@@ -37,6 +37,9 @@ export const miners: Miners = {
     "stable.sx-pizzadex": {
         "EOS-EOSDT-USDE": require("./eos.gl/stable.sx/pizzadex/EOS-EOSDT-USDE"),
     },
+    "stable.sx-pizzaswap": {
+        "EOS-EOSDT-USDE": require("./eos.gl/stable.sx/pizzaswap/EOS-EOSDT-USDE"),
+    },
     "yolo": {
         "BNT-EOS": require("./eos.gl/yolo/BNT-EOS"),
         "EOS-BNT": require("./eos.gl/yolo/EOS-BNT"),
