@@ -6,7 +6,7 @@ import { ACCOUNT } from "../../../src/config";
 export async function mine( account: Name ) {
     const base = tokens["BNT"];
     const quote = tokens["EOS"];
-    const quantity = number_to_asset(10, base.get_symbol());
+    const quantity = number_to_asset(50, base.get_symbol());
 
     return await transact( account, quantity, base, quote);
 }

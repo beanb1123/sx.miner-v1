@@ -7,7 +7,7 @@ export async function mine( account: Name ) {
     // gl.swap
     const base = tokens["EOS"];
     const quote = tokens["EOSDT"];
-    const quantity = number_to_asset(1, base.get_symbol()); // EOS => EOSDT
+    const quantity = number_to_asset(2, base.get_symbol()); // EOS => EOSDT
 
     // stable.sx
     const sx = tokens["USDE"]; // EOSDT => USDE
