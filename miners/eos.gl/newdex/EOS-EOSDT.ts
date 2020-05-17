@@ -6,7 +6,7 @@ import { ACCOUNT } from "../../../src/config";
 export async function mine( account: Name ) {
     const base = tokens["EOS"];
     const quote = tokens["EOSDT"];
-    const quantity = number_to_asset(2, base.get_symbol());
+    const quantity = number_to_asset(5, base.get_symbol());
 
     // newdex
     const code = "eosio.token-eos-eosdt";
