@@ -23,6 +23,7 @@ export const tokens: { [symcode: string]: ExtendedSymbol } = {
     "EIDOS": new ExtendedSymbol("4,EIDOS", "eidosonecoin"),
     "POOL": new ExtendedSymbol("4,POOL", "stpool.eos"),
     "YAS": new ExtendedSymbol("4,YAS", "yastokencode"),
+    "DAPP": new ExtendedSymbol("4,DAPP", "dappservices"),
 }
 
 export function get_symbol( symcode: SymbolCode ) {
