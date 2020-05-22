@@ -11,7 +11,7 @@ new CronJob(process.env.CRON, async () => {
                     try {
                         const trx_id = await miners[miner][exchange][pair].mine(ACCOUNT);
                         if ( !trx_id ) {
-                            console.error(exchange, pair);
+                            console.error(miner, exchange, pair);
                             break;
                         }
                         await timeout(5);
