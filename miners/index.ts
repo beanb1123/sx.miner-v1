@@ -23,6 +23,18 @@ export const miners: Miners = {
             "EOS-USDT": require("./swap.sx/cross.newdex/EOS-USDT"),
             "USDT-EOS": require("./swap.sx/cross.newdex/USDT-EOS")
         },
+        "bancor.v1": {
+            "BNT-EOS": require("./swap.sx/bancor.v1/BNT-EOS"),
+            "EOS-BNT": require("./swap.sx/bancor.v1/EOS-BNT"),
+            "BNT-USDT": require("./swap.sx/bancor.v1/BNT-USDT"),
+            "USDT-BNT": require("./swap.sx/bancor.v1/USDT-BNT"),
+            "BNT-DAPP": require("./swap.sx/bancor.v1/BNT-DAPP"),
+            "DAPP-BNT": require("./swap.sx/bancor.v1/DAPP-BNT"),
+        },
+        "bancor.v2": {
+            "BNT-EOS": require("./swap.sx/bancor.v2/BNT-EOS"),
+            "EOS-BNT": require("./swap.sx/bancor.v2/EOS-BNT"),
+        },
     },
     "eos.gl": {
         "bancor.v1": {
