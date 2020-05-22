@@ -10,3 +10,4 @@ export const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecode
 
 // miner configurations
 export const ACCOUNT = name(process.env.ACCOUNT);
+export const AMOUNT = Number(process.env.AMOUNT || 1);
