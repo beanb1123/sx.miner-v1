@@ -16,7 +16,12 @@ interface Miners {
 export const miners: Miners = {
     "swap.sx": {
         "newdex": {
-            "EOS-DAPP": require("./swap.sx/newdex/EOS-DAPP")
+            "EOS-DAPP": require("./swap.sx/newdex/EOS-DAPP"),
+            "DAPP-EOS": require("./swap.sx/newdex/DAPP-EOS")
+        },
+        "cross.newdex": {
+            "EOS-USDT": require("./swap.sx/cross.newdex/EOS-USDT"),
+            "USDT-EOS": require("./swap.sx/cross.newdex/USDT-EOS")
         },
     },
     "eos.gl": {

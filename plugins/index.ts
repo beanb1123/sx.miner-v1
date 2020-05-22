@@ -4,6 +4,7 @@ import * as token from "./eosio.token"
 import * as gl from "./eos.gl"
 import * as newdex from "./newdex"
 import * as swapNewdex from "./swap.newdex"
+import * as crossNewdex from "./cross.newdex"
 import * as swapSx from "./swap.sx"
 import * as stable from "./stable.sx"
 import * as yolo from "./yolo"
@@ -11,4 +12,4 @@ import * as pizzadex from "./pizzadex"
 import * as pizzaswap from "./pizzaswap"
 import * as delphioracle from "./delphioracle"
 
-export { bancor, flash, token, gl, swapNewdex, swapSx, newdex, stable, yolo, pizzadex, pizzaswap, delphioracle }
+export { bancor, flash, token, gl, crossNewdex, swapNewdex, swapSx, newdex, stable, yolo, pizzadex, pizzaswap, delphioracle }
