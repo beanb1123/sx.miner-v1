@@ -5,6 +5,8 @@ import { CronJob } from "cron"
 
 new CronJob(process.env.CRON, async () => {
     for ( const miner of Object.keys( miners )) {
+        if (process.env.MINER != miner) continue;
+
         for ( const exchange of Object.keys( miners[ miner ] )) {
             for ( const pair of Object.keys( miners[ miner ][ exchange ]) ) {
                 while ( true ) {
