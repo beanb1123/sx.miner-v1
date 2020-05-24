@@ -58,6 +58,9 @@ export const miners: Miners = {
         "stable.sx-pizzaswap": {
             "EOS-USDT-USDE": require("./swap.sx/stable.sx/pizzaswap/EOS-USDT-USDE"),
         },
+        "stable.sx-eos.gl": {
+            "EOS-USDT-EOSDT": require("./swap.sx/stable.sx/eos.gl/EOS-USDT-EOSDT"),
+        },
     },
     "eos.gl": {
         "bancor.v1": {
