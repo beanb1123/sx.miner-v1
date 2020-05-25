@@ -79,6 +79,10 @@ export const miners: Miners = {
             "EOSDT-EOS": require("./eos.gl/newdex/EOSDT-EOS"),
             "FAST-EOS": require("./eos.gl/newdex/FAST-EOS"),
         },
+        "stable.sx": {
+            "USDT-EOSDT": require("./eos.gl/stable.sx/USDT-EOSDT"),
+            "EOSDT-USDT": require("./eos.gl/stable.sx/EOSDT-USDT"),
+        },
         "stable.sx-bancor.v1": {
             "BNT-EOSDT-USDT": require("./eos.gl/stable.sx/bancor.v1/BNT-EOSDT-USDT"),
         },
