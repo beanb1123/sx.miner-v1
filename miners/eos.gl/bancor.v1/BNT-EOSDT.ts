@@ -1,12 +1,12 @@
 import { transact } from "./transact";
 import { name, Name, number_to_asset } from "eos-common";
 import { tokens } from "../../../src/tokens"
-import { ACCOUNT } from "../../../src/config";
+import { ACCOUNT, AMOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
     const base = tokens["BNT"];
     const quote = tokens["EOSDT"];
-    const quantity = number_to_asset(10, base.get_symbol());
+    const quantity = number_to_asset(AMOUNT * 10, base.get_symbol());
 
     // bancor
     const reserve = "bancorc11222";

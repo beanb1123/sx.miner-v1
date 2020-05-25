@@ -1,13 +1,13 @@
 import { Name, number_to_asset } from "eos-common";
 import { transact } from "./transact";
 import { tokens } from "../../../../src/tokens"
-import { ACCOUNT } from "../../../../src/config";
+import { ACCOUNT, AMOUNT } from "../../../../src/config";
 
 export async function mine( account: Name ) {
     // gl.swap
     const base = tokens["BNT"];
     const quote = tokens["EOSDT"];
-    const quantity = number_to_asset(50, base.get_symbol()); // BNT => EOSDT
+    const quantity = number_to_asset(AMOUNT * 10, base.get_symbol()); // BNT => EOSDT
 
     // stable.sx
     const sx = tokens["USDT"]; // EOSDT => USDT

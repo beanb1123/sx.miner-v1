@@ -1,14 +1,14 @@
 import { Name, number_to_asset, asset, name } from "eos-common";
 import { transact } from "./transact";
 import { tokens } from "../../../../src/tokens"
-import { ACCOUNT, rpc } from "../../../../src/config";
+import { ACCOUNT, rpc, AMOUNT } from "../../../../src/config";
 import { pizzaswap } from "../../../../plugins"
 
 export async function mine( account: Name ) {
     // gl.swap
     const base = tokens["EOS"];
     const quote = tokens["EOSDT"];
-    const quantity = number_to_asset(2, base.get_symbol()); // EOS => EOSDT
+    const quantity = number_to_asset(AMOUNT * 1, base.get_symbol()); // EOS => EOSDT
 
     // stable.sx
     const sx = tokens["USDE"]; // EOSDT => USDE
