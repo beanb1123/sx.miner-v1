@@ -1,27 +1,18 @@
-import { name, Asset, Name, ExtendedSymbol } from "eos-common";
-import { rpc, api } from "../../../src/config"
-import { gl, yolo, flash, token } from "../../../plugins"
+import { Asset, Name, ExtendedSymbol } from "eos-common";
+import { api } from "../../../src/config"
+import { gl, yolo, flash } from "../../../plugins"
 import * as utils from "../../../src/utils";
 
 export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol ) {
-    // settings
-    const settings = await gl.get_settings(rpc);
-
-    // get user balance
-    const balance = await token.get_balance(rpc, base_ext_sym.get_contract(), account, base_ext_sym.get_symbol().code())
-
-    // get eos.gl contract balance
-    const base = await token.get_balance(rpc, base_ext_sym.get_contract(), name("eos.gl"), base_ext_sym.get_symbol().code())
-    const quote = await token.get_balance(rpc, quote_ext_sym.get_contract(), name("eos.gl"), quote_ext_sym.get_symbol().code())
-
     // calculations
-    const { out } = gl.calculate_rate( quantity, quote_ext_sym.get_symbol().code(), base, quote, settings.fee );
+    const { out } = await gl.get_calculate_rate( quantity, base_ext_sym, quote_ext_sym );
 
     // actions
     const actions = [
+        flash.savebalance( account, base_ext_sym.get_contract(), base_ext_sym.get_symbol().code() ),
         gl.buymarket( account, base_ext_sym.get_contract(), quantity, quote_ext_sym.get_symbol().code() ),
         yolo.buymarket( account, quote_ext_sym.get_contract(), out, base_ext_sym ),
-        flash.checkbalance( account, base_ext_sym.get_contract(), balance )
+        flash.checkbalance( account, base_ext_sym.get_contract(), base_ext_sym.get_symbol().code() )
     ]
     // push transaction
     return utils.transact( api, actions )

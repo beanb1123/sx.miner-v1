@@ -16,10 +16,11 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
 
     // actions
     const actions = [
+        flash.savebalance( account, base_ext_sym.get_contract(), base_ext_sym.get_symbol().code() ),
         swapSx.buymarket( account, base_ext_sym.get_contract(), quantity, quote_ext_sym.get_symbol().code() ),
         stableSx.buymarket( account, quote_ext_sym.get_contract(), out, sx_ext_sym.get_symbol().code() ),
         pizzaswap.buymarket( account, sx_ext_sym.get_contract(), sx_rate.out, pair, price ),
-        flash.checkbalance( account, base_ext_sym.get_contract(), base_balance ),
+        flash.checkbalance( account, base_ext_sym.get_contract(), base_ext_sym.get_symbol().code() ),
     ]
 
     // push transaction

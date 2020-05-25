@@ -1,13 +1,9 @@
-import { name, Asset, Name, ExtendedSymbol } from "eos-common";
-import * as sx from "sxjs";
-import { rpc, api } from "../../../../src/config"
-import { gl, flash, stableSx, token, bancor } from "../../../../plugins"
+import { Asset, Name, ExtendedSymbol } from "eos-common";
+import { api } from "../../../../src/config"
+import { gl, flash, stableSx, bancor } from "../../../../plugins"
 import * as utils from "../../../../src/utils";
 
 export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, sx_ext_sym: ExtendedSymbol, reserve: string ) {
-    // get user balance
-    const base_balance = await token.get_balance(rpc, base_ext_sym.get_contract(), account, base_ext_sym.get_symbol().code())
-
     // calculations
     const { out } = await gl.get_calculate_rate( quantity, base_ext_sym, quote_ext_sym );
 
@@ -16,10 +12,11 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
 
     // actions
     const actions = [
+        flash.savebalance( account, base_ext_sym.get_contract(), base_ext_sym.get_symbol().code() ),
         gl.buymarket( account, base_ext_sym.get_contract(), quantity, quote_ext_sym.get_symbol().code() ),
         stableSx.buymarket( account, quote_ext_sym.get_contract(), out, sx_ext_sym.get_symbol().code() ),
         bancor.buymarket( account, sx_ext_sym.get_contract(), sx_rate.out, reserve, base_ext_sym.get_symbol().code() ),
-        flash.checkbalance( account, base_ext_sym.get_contract(), base_balance ),
+        flash.checkbalance( account, base_ext_sym.get_contract(), base_ext_sym.get_symbol().code() ),
     ]
 
     // push transaction
