@@ -49,8 +49,8 @@ export const miners: Miners = {
         "stable.sx-bancor.v2": {
             "BNT-USDT-USDB": require("./swap.sx/stable.sx/bancor.v2/BNT-USDT-USDB"),
         },
-        "stable.sx-newdex.swap": {
-            "EOS-USDT-USN": require("./swap.sx/stable.sx/newdex.swap/EOS-USDT-USN"),
+        "stable.sx-swap.newdex": {
+            "EOS-USDT-USN": require("./swap.sx/stable.sx/swap.newdex/EOS-USDT-USN"),
         },
         "stable.sx-pizzadex": {
             "EOS-USDT-USDE": require("./swap.sx/stable.sx/pizzadex/EOS-USDT-USDE"),
@@ -79,6 +79,10 @@ export const miners: Miners = {
             "EOSDT-EOS": require("./eos.gl/newdex/EOSDT-EOS"),
             "FAST-EOS": require("./eos.gl/newdex/FAST-EOS"),
         },
+        "swap.newdex": {
+            "USDT-EOSDT": require("./eos.gl/swap.newdex/EOS-EOSDT"),
+            "EOSDT-USDT": require("./eos.gl/swap.newdex/EOSDT-EOS"),
+        },
         "stable.sx": {
             "USDT-EOSDT": require("./eos.gl/stable.sx/USDT-EOSDT"),
             "EOSDT-USDT": require("./eos.gl/stable.sx/EOSDT-USDT"),
@@ -89,8 +93,8 @@ export const miners: Miners = {
         "stable.sx-bancor.v2": {
             "BNT-EOSDT-USDB": require("./eos.gl/stable.sx/bancor.v2/BNT-EOSDT-USDB"),
         },
-        "stable.sx-newdex.swap": {
-            "EOS-EOSDT-USN": require("./eos.gl/stable.sx/newdex.swap/EOS-EOSDT-USN"),
+        "stable.sx-swap.newdex": {
+            "EOS-EOSDT-USN": require("./eos.gl/stable.sx/swap.newdex/EOS-EOSDT-USN"),
         },
         "stable.sx-pizzadex": {
             "EOS-EOSDT-USDE": require("./eos.gl/stable.sx/pizzadex/EOS-EOSDT-USDE"),
