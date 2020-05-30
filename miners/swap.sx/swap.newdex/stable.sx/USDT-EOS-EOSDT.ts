@@ -13,7 +13,7 @@ export async function mine( account: Name ) {
     const pair_id = 13; // EOS => EOSDT
 
     // stable.sx
-    const sx = tokens["USDT"]; // EOSDT => USDT
+    const sx = tokens["EOSDT"]; // EOSDT => USDT
 
     return await transact( account, quantity, base, quote, sx, pair_id );
 }

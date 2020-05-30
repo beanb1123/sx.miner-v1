@@ -1,4 +1,4 @@
-import { asset, SymbolCode } from "eos-common";
+import { asset, SymbolCode, check } from "eos-common";
 import { Asset } from "eos-common";
 import { rpc } from "../../src/config"
 import { calculate_rate } from "./convert"
@@ -24,11 +24,13 @@ export async function get_calculate_rate( quantity: Asset, quote_symcode: Symbol
     const base = pair[ quantity.symbol.code().to_string() ];
     const quote = pair[ quote_symcode.to_string() ];
 
+    if ( !base ) throw new Error("invalid base");
+    if ( !quote ) throw new Error("invalid quote");
+
     // calculations
     return calculate_rate( quantity, quote_symcode, base, quote, fee );
 }
 
-(async () => {
-    const rate = await get_calculate_rate(new Asset("1.0000 EOS"), new SymbolCode("EOSDT"), 13);
-    console.log(rate.out.toString());
-})()
+// (async () => {
+//     const rate = await get_calculate_rate(new Asset("1.0000 EOS"), new SymbolCode("EOSDT"), 13);
+// })()
