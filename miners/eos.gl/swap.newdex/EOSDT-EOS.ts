@@ -10,7 +10,7 @@ export async function mine( account: Name ) {
     const quantity = number_to_asset(AMOUNT * 3, base.get_symbol());
 
     // swap.newdex
-    const pair_id = 13;
+    const pair_id = 14;
 
     return await transact( account, quantity, base, quote, pair_id );
 }

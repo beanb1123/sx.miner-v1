@@ -13,7 +13,7 @@ export async function mine( account: Name ) {
     const sx = tokens["EOSDT"]; // USDT => EOSDT
 
     // swap.newdex
-    const pair_id = 13; // EOSDT => EOS
+    const pair_id = 14; // EOSDT => EOS
 
     return await transact( account, quantity, base, quote, sx, pair_id );
 }
