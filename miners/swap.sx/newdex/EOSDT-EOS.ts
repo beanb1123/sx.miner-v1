@@ -4,13 +4,13 @@ import { tokens } from "../../../src/tokens"
 import { AMOUNT, ACCOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    const base = tokens["DAPP"];
+    const base = tokens["EOSDT"];
     const quote = tokens["EOS"];
-    const quantity = number_to_asset(AMOUNT * 200, base.get_symbol());
+    const quantity = number_to_asset(AMOUNT * 3, base.get_symbol());
 
     // newdex
-    const code = "dappservices-dapp-eos";
-    const type = "buy";
+    const code = "eosio.token-eos-eosdt";
+    const type = "sell";
 
     return await transact( account, quantity, base, quote, code, type );
 }

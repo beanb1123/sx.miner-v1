@@ -6,7 +6,7 @@ import { ACCOUNT, AMOUNT } from "../../../src/config";
 export async function mine( account: Name ) {
     const base = tokens["DAPP"];
     const quote = tokens["BNT"];
-    const quantity = number_to_asset(AMOUNT * 300, base.get_symbol());
+    const quantity = number_to_asset(AMOUNT * 200, base.get_symbol());
 
     // bancor
     const reserve = "bancorc11154";
