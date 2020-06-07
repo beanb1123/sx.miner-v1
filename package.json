@@ -21,11 +21,11 @@
     "cron": "^1.8.2",
     "decimal.js": "^10.2.0",
     "dotenv": "*",
-    "eos-common": "^0.7.6",
+    "eos-common": "^0.7.9",
     "eosjs": "^21.0.1-rc1",
     "long": "^4.0.0",
     "node-fetch": "*",
-    "sxjs": "^2.0.1",
+    "sxjs": "^2.1.1",
     "ws": "*"
   }
 }

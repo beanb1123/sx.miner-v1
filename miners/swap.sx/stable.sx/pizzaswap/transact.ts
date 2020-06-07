@@ -9,7 +9,7 @@ export async function transact( account: Name, quantity: Asset, base_ext_sym: Ex
     const base_balance = await token.get_balance(rpc, base_ext_sym.get_contract(), account, base_ext_sym.get_symbol().code())
 
     // calculations
-    const { out } = await swapSx.get_calculate_rate( quantity, base_ext_sym, quote_ext_sym );
+    const { out } = await swapSx.get_calculate_rate( quantity, quote_ext_sym.get_symbol().code() );
 
     // get `stablestable` contract balance
     const sx_rate = await stableSx.get_calculate_rate( out, sx_ext_sym.get_symbol().code() );

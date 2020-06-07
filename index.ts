@@ -16,12 +16,12 @@ new CronJob(process.env.CRON, async () => {
                             console.error(miner, exchange, pair);
                             break;
                         }
-                        await timeout(5);
+                        await timeout(0.1);
                     } catch (e) {
                         break;
                     }
                 }
-                await timeout(0.2);
+                await timeout(0.1);
             }
         }
     }

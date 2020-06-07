@@ -1,12 +1,10 @@
-import { name, Asset, ExtendedSymbol } from "eos-common";
+import { Asset, SymbolCode } from "eos-common";
 import { rpc } from "../../src/config"
-import { swapSx, token } from ".."
+import * as sx from "sxjs";
 
-export async function get_calculate_rate( quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, fee = 30 ) {
-    // get swap.sx contract balance
-    const base = await token.get_balance(rpc, base_ext_sym.get_contract(), name("swap.sx"), base_ext_sym.get_symbol().code())
-    const quote = await token.get_balance(rpc, quote_ext_sym.get_contract(), name("swap.sx"), quote_ext_sym.get_symbol().code())
+export async function get_calculate_rate( quantity: Asset, symcode: SymbolCode ) {
+    const settings = await sx.get_settings( rpc, "swap.sx" );
+    const tokens = await sx.get_tokens( rpc, "swap.sx" );
 
-    // calculations
-    return swapSx.calculate_rate( quantity, quote_ext_sym.get_symbol().code(), base, quote, fee );
+    return sx.get_rate( quantity, symcode, tokens, settings );
 }

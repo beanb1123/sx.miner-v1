@@ -5,7 +5,7 @@ import * as utils from "../../../../src/utils";
 
 export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, sx_ext_sym: ExtendedSymbol, pair_id: number ) {
     // calculations
-    const { out } = await swapSx.get_calculate_rate( quantity, base_ext_sym, quote_ext_sym );
+    const { out } = await swapSx.get_calculate_rate( quantity, quote_ext_sym.get_symbol().code() );
 
     // get `stablestable` contract balance
     const sx_rate = await stableSx.get_calculate_rate( out, sx_ext_sym.get_symbol().code() );
