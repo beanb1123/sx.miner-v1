@@ -35,6 +35,14 @@ export const miners: Miners = {
             "EOSDT-EOS": require("./stable.sx/yolo/EOSDT-EOS"),
             "EOS-EOSDT": require("./stable.sx/yolo/EOS-EOSDT"),
         },
+        "eosdt.sx": {
+            "EOSDT-EOS": require("./stable.sx/eosdt.sx/EOSDT-EOS"),
+            "EOS-EOSDT": require("./stable.sx/eosdt.sx/EOS-EOSDT"),
+            "USDT-EOS": require("./stable.sx/eosdt.sx/USDT-EOS"),
+            "EOS-USDT": require("./stable.sx/eosdt.sx/EOS-USDT"),
+            "USDT-EOSDT": require("./stable.sx/eosdt.sx/USDT-EOSDT"),
+            "EOSDT-USDT": require("./stable.sx/eosdt.sx/EOSDT-USDT"),
+        },
     },
     "swap.sx": {
         "bancor.v1": {
