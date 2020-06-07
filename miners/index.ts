@@ -46,6 +46,8 @@ export const miners: Miners = {
         "pizzadex": {
             "USDE-EOS": require("./stable.sx/pizzadex/USDE-EOS"),
             "EOS-USDE": require("./stable.sx/pizzadex/EOS-USDE"),
+            "USDE-USDT": require("./stable.sx/pizzadex/USDE-USDT"),
+            "USDT-USDE": require("./stable.sx/pizzadex/USDT-USDE"),
         },
     },
     "swap.sx": {
