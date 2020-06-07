@@ -14,6 +14,24 @@ interface Miners {
 }
 
 export const miners: Miners = {
+    "stable.sx": {
+        "bancor.v2": {
+            "USDB-EOS": require("./stable.sx/bancor.v2/USDB-EOS"),
+            "EOS-USDB": require("./stable.sx/bancor.v2/EOS-USDB"),
+        },
+        "eos.gl": {
+            "EOSDT-EOS": require("./stable.sx/eos.gl/EOSDT-EOS"),
+            "EOS-EOSDT": require("./stable.sx/eos.gl/EOS-EOSDT"),
+        },
+        "newdex": {
+            "EOSDT-EOS": require("./stable.sx/newdex/EOSDT-EOS"),
+            "EOS-EOSDT": require("./stable.sx/newdex/EOS-EOSDT"),
+        },
+        "swap.newdex": {
+            "EOSDT-EOS": require("./stable.sx/swap.newdex/EOSDT-EOS"),
+            "EOS-EOSDT": require("./stable.sx/swap.newdex/EOS-EOSDT"),
+        },
+    },
     "swap.sx": {
         "bancor.v1": {
             "BNT-EOS": require("./swap.sx/bancor.v1/BNT-EOS"),
