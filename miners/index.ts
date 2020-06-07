@@ -31,6 +31,10 @@ export const miners: Miners = {
             "EOSDT-EOS": require("./stable.sx/swap.newdex/EOSDT-EOS"),
             "EOS-EOSDT": require("./stable.sx/swap.newdex/EOS-EOSDT"),
         },
+        "yolo": {
+            "EOSDT-EOS": require("./stable.sx/yolo/EOSDT-EOS"),
+            "EOS-EOSDT": require("./stable.sx/yolo/EOS-EOSDT"),
+        },
     },
     "swap.sx": {
         "bancor.v1": {
