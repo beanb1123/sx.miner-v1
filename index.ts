@@ -16,7 +16,7 @@ new CronJob(process.env.CRON, async () => {
                             console.error(miner, exchange, pair);
                             break;
                         }
-                        await timeout(0.1);
+                        await timeout(0.5);
                     } catch (e) {
                         break;
                     }
