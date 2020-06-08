@@ -8,6 +8,7 @@ export const tokens: { [symcode: string]: ExtendedSymbol } = {
     "USDT": new ExtendedSymbol("4,USDT", "tethertether"),
     "EOSDT": new ExtendedSymbol("9,EOSDT", "eosdtsttoken"),
     "BNT": new ExtendedSymbol("10,BNT", "bntbntbntbnt"),
+    "BOID": new ExtendedSymbol("4,BOID", "boidcomtoken"),
     "PBTC": new ExtendedSymbol("8,PBTC", "btc.ptokens"),
     "CHEX": new ExtendedSymbol("8,CHEX", "chexchexchex"),
     "USDB": new ExtendedSymbol("4,USDB", "usdbusdbusdb"),
