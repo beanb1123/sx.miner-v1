@@ -1,8 +1,8 @@
 import { transfer } from "../eosio.token/actions";
 import { Name, Asset, name } from "eos-common";
 
-export function buymarket( from: Name, contract: Name, quantity: Asset, pair: string, price: number ) {
-    const memo = `${pair}-swap-${price}`;
+export function buymarket( from: Name, contract: Name, quantity: Asset, pair: string ) {
+    const memo = `${pair}-swap-0`;
     return transfer(from, name("pzaswapcntct"), contract, quantity, memo )
 }
 

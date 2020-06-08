@@ -5,14 +5,13 @@ import { ACCOUNT, AMOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
     const base = tokens["EOS"];
-    const quote = tokens["FAST"];
+    const quote = tokens["USDE"];
     const quantity = number_to_asset(AMOUNT, base.get_symbol());
 
-    // newdex
-    const code = "fastecoadmin-fast-eos";
-    const type = "sell";
+    // pizzadex
+    const pair = "eos2usde"
 
-    return await transact( account, quantity, base, quote, code, type );
+    return await transact( account, quantity, base, quote, pair );
 }
 
 if (require.main === module) {

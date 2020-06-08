@@ -71,6 +71,10 @@ export const miners: Miners = {
             "USDE-USDT": require("./stable.sx/pizzadex/USDE-USDT"),
             "USDT-USDE": require("./stable.sx/pizzadex/USDT-USDE"),
         },
+        "pizzaswap": {
+            "USDE-EOS": require("./stable.sx/pizzadex/USDE-EOS"),
+            "EOS-USDE": require("./stable.sx/pizzadex/EOS-USDE"),
+        },
         "swap.newdex": {
             "EOSDT-EOS": require("./stable.sx/swap.newdex/EOSDT-EOS"),
             "EOS-EOSDT": require("./stable.sx/swap.newdex/EOS-EOSDT"),
@@ -109,6 +113,10 @@ export const miners: Miners = {
             "EOS-EOSDT": require("./swap.sx/newdex/EOS-EOSDT"),
             "EOSDT-EOS": require("./swap.sx/newdex/EOSDT-EOS"),
         },
+        // "pizzaswap": {
+        //     "DAPP-EOS": require("./swap.sx/pizzadex/DAPP-EOS"),
+        //     "EOS-DAPP": require("./swap.sx/pizzadex/EOS-DAPP"),
+        // },
         "swap.newdex": {
             "EOS-EOSDT": require("./swap.sx/swap.newdex/EOS-EOSDT"),
             "EOSDT-EOS": require("./swap.sx/swap.newdex/EOSDT-EOS"),
