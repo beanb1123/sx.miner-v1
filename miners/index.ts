@@ -121,13 +121,15 @@ export const miners: Miners = {
     "swap.sx": {
         "bancor.v1": {
             "BNT-EOS": require("./swap.sx/bancor.v1/BNT-EOS"),
+            "BNT-DICE": require("./swap.sx/bancor.v1/BNT-DICE"),
             "EOS-BNT": require("./swap.sx/bancor.v1/EOS-BNT"),
             "BNT-USDT": require("./swap.sx/bancor.v1/BNT-USDT"),
+            "DAPP-BNT": require("./swap.sx/bancor.v1/DAPP-BNT"),
+            "DICE-BNT": require("./swap.sx/bancor.v1/DICE-BNT"),
             "USDT-BNT": require("./swap.sx/bancor.v1/USDT-BNT"),
             "BNT-EOSDT": require("./swap.sx/bancor.v1/BNT-EOSDT"),
             "EOSDT-BNT": require("./swap.sx/bancor.v1/EOSDT-BNT"),
             "BNT-DAPP": require("./swap.sx/bancor.v1/BNT-DAPP"),
-            "DAPP-BNT": require("./swap.sx/bancor.v1/DAPP-BNT"),
         },
         "bancor.v2": {
             "BNT-EOS": require("./swap.sx/bancor.v2/BNT-EOS"),
@@ -142,8 +144,12 @@ export const miners: Miners = {
             "EOS-EOSDT": require("./swap.sx/eos.gl/EOS-EOSDT"),
         },
         "newdex": {
+            "BOID-EOS": require("./swap.sx/newdex/BOID-EOS"),
             "DAPP-EOS": require("./swap.sx/newdex/DAPP-EOS"),
+            "DICE-EOS": require("./swap.sx/newdex/DICE-EOS"),
             "EOS-DAPP": require("./swap.sx/newdex/EOS-DAPP"),
+            "EOS-BOID": require("./swap.sx/newdex/EOS-BOID"),
+            "EOS-DICE": require("./swap.sx/newdex/EOS-DICE"),
             "EOS-EOSDT": require("./swap.sx/newdex/EOS-EOSDT"),
             "EOSDT-EOS": require("./swap.sx/newdex/EOSDT-EOS"),
         },
@@ -154,6 +160,8 @@ export const miners: Miners = {
         "swap.newdex": {
             "EOS-EOSDT": require("./swap.sx/swap.newdex/EOS-EOSDT"),
             "EOSDT-EOS": require("./swap.sx/swap.newdex/EOSDT-EOS"),
+            "EOS-DICE": require("./swap.sx/swap.newdex/EOS-DICE"),
+            "DICE-EOS": require("./swap.sx/swap.newdex/DICE-EOS"),
         },
     },
 }
