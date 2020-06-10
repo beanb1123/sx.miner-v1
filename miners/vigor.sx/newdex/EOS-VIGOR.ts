@@ -9,7 +9,7 @@ export async function mine( account: Name ) {
     const quantity = number_to_asset(AMOUNT, base.get_symbol());
 
     // newdex
-    const code = "vigortoken11-eos-vigor";
+    const code = "eosio.token-eos-vigor";
     const type = "buy";
 
     return await transact( account, quantity, base, quote, code, type );
