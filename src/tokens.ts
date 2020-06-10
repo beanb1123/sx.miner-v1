@@ -25,6 +25,7 @@ export const tokens: { [symcode: string]: ExtendedSymbol } = {
     "POOL": new ExtendedSymbol("4,POOL", "stpool.eos"),
     "YAS": new ExtendedSymbol("4,YAS", "yastokencode"),
     "DAPP": new ExtendedSymbol("4,DAPP", "dappservices"),
+    "VIGOR": new ExtendedSymbol("4,VIGOR", "vigortoken11"),
 }
 
 export function get_symbol( symcode: SymbolCode ) {

@@ -164,4 +164,46 @@ export const miners: Miners = {
             "DICE-EOS": require("./swap.sx/swap.newdex/DICE-EOS"),
         },
     },
+    "vigor.sx": {
+        "eos.gl": {
+            "EOS-EOSDT": require("./vigor.sx/eos.gl/EOS-EOSDT"),
+            "EOSDT-EOS": require("./vigor.sx/eos.gl/EOSDT-EOS")
+        },
+        "newdex": {
+            "EOSDT-EOS": require("./vigor.sx/newdex/EOSDT-EOS"),
+            "EOS-EOSDT": require("./vigor.sx/newdex/EOS-EOSDT"),
+            "VIGOR-EOS": require("./vigor.sx/newdex/VIGOR-EOS"),
+            "EOS-VIGOR": require("./vigor.sx/newdex/EOS-VIGOR"),
+        },
+        "stable.sx": {
+            "EOS-EOSDT": require("./vigor.sx/stable.sx/EOS-EOSDT"),
+            "EOS-USDT": require("./vigor.sx/stable.sx/EOS-USDT"),
+            "EOS-VIGOR": require("./vigor.sx/stable.sx/EOS-VIGOR"),
+            "EOSDT-EOS": require("./vigor.sx/stable.sx/EOSDT-EOS"),
+            "EOSDT-USDT": require("./vigor.sx/stable.sx/EOSDT-USDT"),
+            "EOSDT-VIGOR": require("./vigor.sx/stable.sx/EOSDT-VIGOR"),
+            "USDT-EOS": require("./vigor.sx/stable.sx/USDT-EOS"),
+            "USDT-EOSDT": require("./vigor.sx/stable.sx/USDT-EOSDT"),
+            "USDT-VIGOR": require("./vigor.sx/stable.sx/USDT-VIGOR"),
+            "VIGOR-EOS": require("./vigor.sx/stable.sx/VIGOR-EOS"),
+            "VIGOR-EOSDT": require("./vigor.sx/stable.sx/VIGOR-EOSDT"),
+            "VIGOR-USDT": require("./vigor.sx/stable.sx/VIGOR-USDT"),
+        },
+        "swap.newdex": {
+            "EOSDT-EOS": require("./vigor.sx/swap.newdex/EOSDT-EOS"),
+            "EOS-EOSDT": require("./vigor.sx/swap.newdex/EOS-EOSDT"),
+        },
+        "swap.sx": {
+            "EOS-EOSDT": require("./vigor.sx/swap.sx/EOS-EOSDT"),
+            "EOS-USDT": require("./vigor.sx/swap.sx/EOS-USDT"),
+            "EOSDT-EOS": require("./vigor.sx/swap.sx/EOSDT-EOS"),
+            "EOSDT-USDT": require("./vigor.sx/swap.sx/EOSDT-USDT"),
+            "USDT-EOS": require("./vigor.sx/swap.sx/USDT-EOS"),
+            "USDT-EOSDT": require("./vigor.sx/swap.sx/USDT-EOSDT"),
+        },
+        "yolo": {
+            "EOS-EOSDT": require("./vigor.sx/yolo/EOS-EOSDT"),
+            "EOSDT-EOS": require("./vigor.sx/yolo/EOSDT-EOS"),
+        },
+    },
 }
