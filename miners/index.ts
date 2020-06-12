@@ -153,10 +153,6 @@ export const miners: Miners = {
             "EOS-EOSDT": require("./swap.sx/newdex/EOS-EOSDT"),
             "EOSDT-EOS": require("./swap.sx/newdex/EOSDT-EOS"),
         },
-        // "pizzaswap": {
-        //     "DAPP-EOS": require("./swap.sx/pizzadex/DAPP-EOS"),
-        //     "EOS-DAPP": require("./swap.sx/pizzadex/EOS-DAPP"),
-        // },
         "swap.newdex": {
             "EOS-EOSDT": require("./swap.sx/swap.newdex/EOS-EOSDT"),
             "EOSDT-EOS": require("./swap.sx/swap.newdex/EOSDT-EOS"),
@@ -164,10 +160,66 @@ export const miners: Miners = {
             "DICE-EOS": require("./swap.sx/swap.newdex/DICE-EOS"),
         },
     },
+    "usde.sx": {
+        "eos.gl": {
+            "EOS-EOSDT": require("./usde.sx/eos.gl/EOS-EOSDT"),
+            "EOSDT-EOS": require("./usde.sx/eos.gl/EOSDT-EOS")
+        },
+        "eosdt.sx": {
+            "EOS-EOSDT": require("./usde.sx/eosdt.sx/EOS-EOSDT"),
+            "EOS-USDT": require("./usde.sx/eosdt.sx/EOS-USDT"),
+            "EOSDT-EOS": require("./usde.sx/eosdt.sx/EOSDT-EOS"),
+            "EOSDT-USDT": require("./usde.sx/eosdt.sx/EOSDT-USDT"),
+            "USDT-EOS": require("./usde.sx/eosdt.sx/USDT-EOS"),
+            "USDT-EOSDT": require("./usde.sx/eosdt.sx/USDT-EOSDT"),
+        },
+        "newdex": {
+            "EOSDT-EOS": require("./usde.sx/newdex/EOSDT-EOS"),
+            "EOS-EOSDT": require("./usde.sx/newdex/EOS-EOSDT"),
+        },
+        "stable.sx": {
+            "EOS-EOSDT": require("./usde.sx/stable.sx/EOS-EOSDT"),
+            "EOS-USDT": require("./usde.sx/stable.sx/EOS-USDT"),
+            "EOS-USDE": require("./usde.sx/stable.sx/EOS-USDE"),
+            "EOSDT-EOS": require("./usde.sx/stable.sx/EOSDT-EOS"),
+            "EOSDT-USDT": require("./usde.sx/stable.sx/EOSDT-USDT"),
+            "EOSDT-USDE": require("./usde.sx/stable.sx/EOSDT-USDE"),
+            "USDT-EOS": require("./usde.sx/stable.sx/USDT-EOS"),
+            "USDT-EOSDT": require("./usde.sx/stable.sx/USDT-EOSDT"),
+            "USDT-USDE": require("./usde.sx/stable.sx/USDT-USDE"),
+            "USDE-EOS": require("./usde.sx/stable.sx/USDE-EOS"),
+            "USDE-EOSDT": require("./usde.sx/stable.sx/USDE-EOSDT"),
+            "USDE-USDT": require("./usde.sx/stable.sx/USDE-USDT"),
+        },
+        "swap.newdex": {
+            "EOSDT-EOS": require("./usde.sx/swap.newdex/EOSDT-EOS"),
+            "EOS-EOSDT": require("./usde.sx/swap.newdex/EOS-EOSDT"),
+        },
+        "swap.sx": {
+            "EOS-EOSDT": require("./usde.sx/swap.sx/EOS-EOSDT"),
+            "EOS-USDT": require("./usde.sx/swap.sx/EOS-USDT"),
+            "EOSDT-EOS": require("./usde.sx/swap.sx/EOSDT-EOS"),
+            "EOSDT-USDT": require("./usde.sx/swap.sx/EOSDT-USDT"),
+            "USDT-EOS": require("./usde.sx/swap.sx/USDT-EOS"),
+            "USDT-EOSDT": require("./usde.sx/swap.sx/USDT-EOSDT"),
+        },
+        "yolo": {
+            "EOS-EOSDT": require("./usde.sx/yolo/EOS-EOSDT"),
+            "EOSDT-EOS": require("./usde.sx/yolo/EOSDT-EOS"),
+        },
+    },
     "vigor.sx": {
         "eos.gl": {
             "EOS-EOSDT": require("./vigor.sx/eos.gl/EOS-EOSDT"),
             "EOSDT-EOS": require("./vigor.sx/eos.gl/EOSDT-EOS")
+        },
+        "eosdt.sx": {
+            "EOS-EOSDT": require("./vigor.sx/eosdt.sx/EOS-EOSDT"),
+            "EOS-USDT": require("./vigor.sx/eosdt.sx/EOS-USDT"),
+            "EOSDT-EOS": require("./vigor.sx/eosdt.sx/EOSDT-EOS"),
+            "EOSDT-USDT": require("./vigor.sx/eosdt.sx/EOSDT-USDT"),
+            "USDT-EOS": require("./vigor.sx/eosdt.sx/USDT-EOS"),
+            "USDT-EOSDT": require("./vigor.sx/eosdt.sx/USDT-EOSDT"),
         },
         "newdex": {
             "EOSDT-EOS": require("./vigor.sx/newdex/EOSDT-EOS"),

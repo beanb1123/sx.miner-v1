@@ -21,10 +21,11 @@ import * as eosdtSx from "./eosdt.sx"
 import * as swapSx from "./swap.sx"
 import * as stableSx from "./stable.sx"
 import * as vigorSx from "./vigor.sx"
+import * as usdeSx from "./usde.sx"
 import * as gl from "./eos.gl"
 
 export {
-    swapSx, stableSx, vigorSx, eosdtSx,
+    swapSx, stableSx, vigorSx, eosdtSx, usdeSx,
     swapNewdex, newdex, crossNewdex,
     bancor, flash, token, gl, yolo, pizzadex, pizzaswap, delphioracle
 }
