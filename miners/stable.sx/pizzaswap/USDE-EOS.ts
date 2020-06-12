@@ -6,7 +6,7 @@ import { ACCOUNT, AMOUNT } from "../../../src/config";
 export async function mine( account: Name ) {
     const base = tokens["USDE"];
     const quote = tokens["EOS"];
-    const quantity = number_to_asset(AMOUNT, base.get_symbol());
+    const quantity = number_to_asset(AMOUNT * 3, base.get_symbol());
 
     // pizzadex
     const pair = "eos2usde"

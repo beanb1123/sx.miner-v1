@@ -4,7 +4,6 @@ import { tokens } from "../../../src/tokens"
 import { ACCOUNT, AMOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    // eos.gl
     const base = tokens["EOSDT"];
     const quote = tokens["EOS"];
     const quantity = number_to_asset(AMOUNT * 3, base.get_symbol());
