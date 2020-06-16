@@ -49,6 +49,10 @@ export const miners: Miners = {
             "EOS-EOSDT": require("./eosdt.sx/eos.gl/EOS-EOSDT"),
             "EOSDT-EOS": require("./eosdt.sx/eos.gl/EOSDT-EOS")
         },
+        "cross.sx": {
+            "EOS-USDT": require("./eosdt.sx/cross.sx/EOS-USDT"),
+            "USDT-EOS": require("./eosdt.sx/cross.sx/USDT-EOS")
+        },
         "newdex": {
             "EOSDT-EOS": require("./eosdt.sx/newdex/EOSDT-EOS"),
             "EOS-EOSDT": require("./eosdt.sx/newdex/EOS-EOSDT"),
