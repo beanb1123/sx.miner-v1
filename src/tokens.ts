@@ -6,6 +6,7 @@ export const tokens: { [symcode: string]: ExtendedSymbol } = {
     "EOS": new ExtendedSymbol("4,EOS", "eosio.token"),
     "GL": new ExtendedSymbol("4,GL", "token.gl"),
     "USDT": new ExtendedSymbol("4,USDT", "tethertether"),
+    "USDT@issue.newdex": new ExtendedSymbol("8,USDT", "issue.newdex"),
     "EOSDT": new ExtendedSymbol("9,EOSDT", "eosdtsttoken"),
     "BNT": new ExtendedSymbol("10,BNT", "bntbntbntbnt"),
     "BOID": new ExtendedSymbol("4,BOID", "boidcomtoken"),

@@ -37,7 +37,5 @@ export function calculate_fee( quantity: Asset, fee = 30 )
 export function calculate_rate( quantity: Asset, out_symcode: SymbolCode, base: Asset, quote: Asset, fee = 30 )
 {
     const calculated_fee = calculate_fee( quantity, fee );
-    const out = calculate_out( Asset.minus( quantity, calculated_fee ), out_symcode, base, quote );
-
-    return { out, fee: calculated_fee };
+    return calculate_out( Asset.minus( quantity, calculated_fee ), out_symcode, base, quote );
 }
