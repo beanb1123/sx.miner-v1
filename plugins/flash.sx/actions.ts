@@ -26,7 +26,6 @@ export function checkbalance( account: Name, symcodes: ExtendedSymbol[], authori
             symcodes: symcodes.map( row => {
                 return { key: row.get_symbol().code().to_string(), value: row.get_contract().to_string() }
             }),
-            addition: null
         }
     }
 }
