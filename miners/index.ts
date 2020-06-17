@@ -87,6 +87,10 @@ export const miners: Miners = {
             "USDB-EOS": require("./stable.sx/bancor.v2/USDB-EOS"),
             "EOS-USDB": require("./stable.sx/bancor.v2/EOS-USDB"),
         },
+        "cross.sx": {
+            "EOS-USDT": require("./stable.sx/cross.sx/EOS-USDT"),
+            "USDT-EOS": require("./stable.sx/cross.sx/USDT-EOS")
+        },
         "eos.gl": {
             "EOSDT-EOS": require("./stable.sx/eos.gl/EOSDT-EOS"),
             "EOS-EOSDT": require("./stable.sx/eos.gl/EOS-EOSDT"),
@@ -169,6 +173,10 @@ export const miners: Miners = {
         },
     },
     "usde.sx": {
+        "cross.sx": {
+            "EOS-USDT": require("./usde.sx/cross.sx/EOS-USDT"),
+            "USDT-EOS": require("./usde.sx/cross.sx/USDT-EOS")
+        },
         "eos.gl": {
             "EOS-EOSDT": require("./usde.sx/eos.gl/EOS-EOSDT"),
             "EOSDT-EOS": require("./usde.sx/eos.gl/EOSDT-EOS")
@@ -217,6 +225,10 @@ export const miners: Miners = {
         },
     },
     "vigor.sx": {
+        "cross.sx": {
+            "EOS-USDT": require("./vigor.sx/cross.sx/EOS-USDT"),
+            "USDT-EOS": require("./vigor.sx/cross.sx/USDT-EOS")
+        },
         "eos.gl": {
             "EOS-EOSDT": require("./vigor.sx/eos.gl/EOS-EOSDT"),
             "EOSDT-EOS": require("./vigor.sx/eos.gl/EOSDT-EOS")
