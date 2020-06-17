@@ -24,7 +24,8 @@ export function checkbalance( account: Name, symcodes: ExtendedSymbol[], authori
         data: {
             account: account.to_string(),
             symcodes: symcodes.map( row => {
-                return { key: row.get_symbol().code().to_string(), value: row.get_contract().to_string() }
+                const sym = `${row.get_symbol().precision()},${row.get_symbol().code().to_string()}`;
+                return { sym, contract: row.get_contract().to_string() }
             }),
         }
     }
@@ -38,7 +39,8 @@ export function savebalance( account: Name, symcodes: ExtendedSymbol[], authoriz
         data: {
             account: account.to_string(),
             symcodes: symcodes.map( row => {
-                return { key: row.get_symbol().code().to_string(), value: row.get_contract().to_string() }
+                const sym = `${row.get_symbol().precision()},${row.get_symbol().code().to_string()}`;
+                return { sym, contract: row.get_contract().to_string() }
             }),
         }
     }
