@@ -5,7 +5,7 @@ import * as utils from "../../../src/utils";
 
 export async function transact( account: Name, quantity: Asset, base_ext_sym: ExtendedSymbol, quote_ext_sym: ExtendedSymbol, reserve: string ) {
     // calculations
-    const rate = await gl.get_calculate_rate( quantity, base_ext_sym, quote_ext_sym );
+    const rate = await gl.get_calculate_rate( quantity, quote_ext_sym.get_symbol().code() );
 
     // actions
     const actions = [
