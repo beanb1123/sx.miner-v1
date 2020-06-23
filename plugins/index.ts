@@ -17,16 +17,13 @@ import * as pizzadex from "./pizzadex"
 import * as pizzaswap from "./pizzaswap"
 
 // SX Swap
-import * as eosdtSx from "./eosdt.sx"
 import * as swapSx from "./swap.sx"
 import * as stableSx from "./stable.sx"
-import * as vigorSx from "./vigor.sx"
-import * as usdeSx from "./usde.sx"
 import * as crossSx from "./cross.sx"
 import * as gl from "./eos.gl"
 
 export {
-    swapSx, stableSx, vigorSx, eosdtSx, usdeSx, crossSx,
+    swapSx, stableSx, crossSx,
     swapNewdex, newdex, crossNewdex,
     bancor, flash, token, gl, yolo, pizzadex, pizzaswap, delphioracle
 }
