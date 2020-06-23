@@ -4,11 +4,15 @@ import { tokens } from "../../../src/tokens"
 import { ACCOUNT, AMOUNT } from "../../../src/config";
 
 export async function mine( account: Name ) {
-    const base = tokens["USDE"];
+    const base = tokens["EOSDT"];
     const quote = tokens["EOS"];
     const quantity = number_to_asset(AMOUNT * 3, base.get_symbol());
 
-    return await transact( account, quantity, base, quote);
+    // newdex
+    const code = "eosio.token-eos-eosdt";
+    const type = "sell";
+
+    return await transact( account, quantity, base, quote, code, type );
 }
 
 if (require.main === module) {
