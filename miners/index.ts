@@ -106,4 +106,16 @@ export const miners: Miners = {
             "EOSDT-EOS": require("./swap.sx/stable.sx/EOSDT-EOS"),
         },
     },
+    "vigor.sx": {
+        "stable.sx": {
+            "VIGOR-USDT": require("./vigor.sx/stable.sx/VIGOR-USDT"),
+            "USDT-VIGOR": require("./vigor.sx/stable.sx/USDT-VIGOR"),
+        },
+    },
+    "eosdt.sx": {
+        "stable.sx": {
+            "EOSDT-USDT": require("./eosdt.sx/stable.sx/EOSDT-USDT"),
+            "USDT-EOSDT": require("./eosdt.sx/stable.sx/USDT-EOSDT"),
+        },
+    },
 }
