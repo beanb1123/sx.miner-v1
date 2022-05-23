@@ -1,10 +1,8 @@
-// Bancor
+// Swap.Box
 import * as bancor from "./swap.box"
 
-// Newdex
-import * as newdex from "./alcor"
+// alcor
 import * as swapNewdex from "./alcor.swap"
-import * as crossNewdex from "./cross.alcor"
 
 // Utils
 import * as yolo from "./yolo"
